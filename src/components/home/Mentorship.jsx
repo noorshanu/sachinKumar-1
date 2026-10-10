@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Container from '../layout/Container';
 import TelegramCta from '../common/TelegramCta';
+import { MentorshipSessionStartsSoon } from './MentorshipSessionNotice';
 import MentorshipCard from './MentorshipCard';
 import { mentorshipPrograms } from '../../data/mentorship';
 import { fadeUp, staggerContainer } from '../../lib/constants';
@@ -19,6 +20,16 @@ export default function Mentorship() {
       />
 
       <Container className="relative z-10">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="mb-6"
+        >
+          <MentorshipSessionStartsSoon />
+        </motion.div>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"

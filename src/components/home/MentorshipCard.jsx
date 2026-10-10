@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FiCheck } from 'react-icons/fi';
-import TelegramCta from '../common/TelegramCta';
 
 export default function MentorshipCard({ program, index }) {
   const Icon = program.icon;
@@ -48,12 +47,6 @@ export default function MentorshipCard({ program, index }) {
           </motion.li>
         ))}
       </ul>
-
-      <div className="mt-auto pt-4">
-        <TelegramCta size="sm" className="w-full text-[13px]" iconPosition="right">
-          Explore Mentorship
-        </TelegramCta>
-      </div>
     </motion.article>
   );
 }

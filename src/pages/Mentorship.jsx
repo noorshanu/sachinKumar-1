@@ -2,6 +2,10 @@ import { motion } from 'framer-motion';
 import Container from '../components/layout/Container';
 import MentorshipCard from '../components/home/MentorshipCard';
 import TelegramCta from '../components/common/TelegramCta';
+import {
+  MentorshipSessionStartsSoon,
+  MentorshipTelegramGroupLink,
+} from '../components/home/MentorshipSessionNotice';
 import { mentorshipPrograms } from '../data/mentorship';
 import { fadeUp } from '../lib/constants';
 
@@ -11,6 +15,9 @@ export default function MentorshipPage() {
       <section className="bg-brand-cream py-16 md:py-24">
         <Container>
           <motion.div variants={fadeUp} initial="hidden" animate="visible">
+            <div className="mb-6">
+              <MentorshipSessionStartsSoon />
+            </div>
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-text-muted">
               Learn | Apply | Scale
             </p>
@@ -52,10 +59,8 @@ export default function MentorshipPage() {
               Reach out and we&apos;ll help you find the best fit based on your experience level
               and trading goals.
             </p>
-            <div className="mt-6">
-              <TelegramCta iconPosition="right">
-                Get in Touch
-              </TelegramCta>
+            <div className="mt-6 flex justify-center">
+              <MentorshipTelegramGroupLink />
             </div>
           </motion.div>
         </Container>
